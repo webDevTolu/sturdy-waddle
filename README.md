@@ -12,3 +12,11 @@ Typescript adds:
 - Meta-programming features like Decorators
 - Rich configuration options
 - modern tooling that helps in non-typescript project
+
+### Typescript Types
+
+#### Core Types
+
+- number
+- string
+- boolean (true/false)
