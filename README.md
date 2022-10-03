@@ -31,7 +31,7 @@ function greet(name: string, age: number, isLoggedIn: boolean) {
 }
 ```
 
-#### Type inference
+##### Type inference
 
 This is when typescript determines the type of a variable by the value(s) initialized to it.
 
@@ -117,3 +117,5 @@ const animal = {
   ```
 
 - any `*`
+
+#### Union Types
