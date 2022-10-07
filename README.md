@@ -119,3 +119,17 @@ const animal = {
 - any `*`
 
 #### Union Types
+
+Represented with the `|`
+
+```ts
+const variable: number | string;
+```
+
+#### Type Aliases
+
+Define your custom type using the `type` keyword.
+
+```ts
+type MyType = number | string;
+```
