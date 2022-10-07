@@ -1,17 +1,22 @@
-type Combinable = number | string;
+const add = (n1: number, n2: number): number => {
+  return n1 + n2;
+};
 
-function combine(input1: Combinable, input2: Combinable) {
-  let result;
-  if (typeof input1 === "number" && typeof input2 === "number") {
-    result = input1 + input2;
-  } else {
-    result = input1.toString() + input2.toString();
-  }
-  return result;
+const printNumber = (num: number): void => {
+  console.log("Result", num);
+};
+
+printNumber(add(2, 12));
+
+let customFunction: (a: number, b: number) => number;
+customFunction = add;
+console.log(customFunction(8, 8));
+
+function webDevTolu(n1: number, n2: number, cb: (num: number) => void) {
+  const result = n1 + n2;
+  cb(result);
 }
 
-const combineAges = combine(23, 32);
-console.log(combineAges);
-
-const combineNames = combine("Tolu", ".dev");
-console.log(combineNames);
+webDevTolu(8, 6, (addedResult) => {
+  console.log(addedResult);
+});

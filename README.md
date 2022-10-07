@@ -133,3 +133,52 @@ Define your custom type using the `type` keyword.
 ```ts
 type MyType = number | string;
 ```
+
+### Typescript Functions
+
+```ts
+const add = (n1: number, n2: number): number => {
+  return n1 + n2;
+};
+```
+
+> if it's not necessary, let typescript infer the type.
+
+if the function does not return any value or have a return statement, the type inferred on the function would be type `void`
+
+```ts
+const printNumber = (num: number) => {
+  console.log("Result", num);
+};
+```
+
+#### Function Type
+
+```ts
+let customFunction: Function;
+```
+
+A function type is a type that describe a function and its parameter(s), it's created with `() => type`
+
+```ts
+const add = (n1: number, n2: number): number => {
+  return n1 + n2;
+};
+let customFunction: (a: number, b: number) => number;
+customFunction = add;
+
+// hence, the add function must be of the same type to customFunction, i.e receives two parameters which are both numbers
+```
+
+> a parameter can also be a function type
+
+```ts
+function webDevTolu(n1: number, n2: number, cb: (num: number) => void) {
+  const result = n1 + n2;
+  cb(result);
+}
+
+webDevTolu(8, 6, (addedResult) => {
+  console.log(addedResult);
+});
+```
