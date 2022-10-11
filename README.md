@@ -182,3 +182,7 @@ webDevTolu(8, 6, (addedResult) => {
   console.log(addedResult);
 });
 ```
+
+### Unknown Type
+
+`let variableName: unknown;`
