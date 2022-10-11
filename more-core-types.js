@@ -10,12 +10,6 @@ const person = {
     hobbies: ["Gaming", "Watching movies"],
     role: Role.ADMIN,
 };
-// const person = {
-//   name: "Tolu",
-//   age: 21,
-//   hobbies: ["Gaming", "Watching movies"],
-//   role: Role.ADMIN,
-// };
 person.role === Role.ADMIN
     ? console.log("Welcome Admin")
     : console.log("Welcome User");
