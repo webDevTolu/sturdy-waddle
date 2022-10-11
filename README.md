@@ -190,3 +190,13 @@ webDevTolu(8, 6, (addedResult) => {
 #### Never Type
 
 `function variableFunction(): never {}`
+
+### The Typescript Compiler
+
+`tsc app.ts -w` or `tsc app.ts --watch`
+
+This is suitable for one file.
+
+For multiple files, run `tsc --init`
+
+> This create a `tsconfig.json` file, making it possible to run just run `tsc` or `tsc -w`
