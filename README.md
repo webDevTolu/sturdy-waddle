@@ -183,6 +183,10 @@ webDevTolu(8, 6, (addedResult) => {
 });
 ```
 
-### Unknown Type
+#### Unknown Type
 
 `let variableName: unknown;`
+
+#### Never Type
+
+`function variableFunction(): never {}`
