@@ -1,11 +1,12 @@
-import React from "react";
+import { FC } from "react";
 import TodoClass from "../models/todo";
+import TodoItem from "./TodoItem";
 
-const Todo: React.FC<{ items: TodoClass[] }> = ({ items }) => {
+const Todo: FC<{ items: TodoClass[] }> = ({ items }) => {
   return (
     <ul>
       {items.map((item) => (
-        <li key={item.id}>{item.text}</li>
+        <TodoItem key={item.id} text={item.text} />
       ))}
     </ul>
   );
