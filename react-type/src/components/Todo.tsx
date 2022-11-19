@@ -2,11 +2,20 @@ import { FC } from "react";
 import TodoClass from "../models/todo";
 import TodoItem from "./TodoItem";
 
-const Todo: FC<{ items: TodoClass[] }> = ({ items }) => {
+const Todo: FC<{ items: TodoClass[]; onRemoveTodo: (id: string) => void }> = ({
+  items,
+  onRemoveTodo,
+}) => {
   return (
-    <ul>
+    <ul className="flex flex-col gap-y-2 divide-y divide-blue-200">
       {items.map((item) => (
-        <TodoItem key={item.id} text={item.text} />
+        <TodoItem
+          key={item.id}
+          text={item.text}
+          onRemoveTodo={() => {
+            onRemoveTodo(item.id);
+          }}
+        />
       ))}
     </ul>
   );
